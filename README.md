@@ -96,13 +96,13 @@ CLASS	Course ----------->	SECTION	Section (A/B/C)
 ##### pip install -r requirements.txt
 <img width="1920" height="992" alt="Screenshot 2025-07-10 190202" src="https://github.com/user-attachments/assets/bdc4a0ba-c89a-4e91-b864-f17796000f75" />
 
-# Step 5: Insert sample student data into SQLite DB
-python sqlite.py
+#### Step 5: Insert sample student data into SQLite DB
+##### python sqlite.py
 <img width="1920" height="1009" alt="Screenshot 2025-07-10 190216" src="https://github.com/user-attachments/assets/73cec51e-2e86-41c8-bf94-df91b94598ce" />
 
 
-# Step 6: Launch the Streamlit app
-streamlit run sql.py
+#### Step 6: Launch the Streamlit app
+##### streamlit run sql.py
 <img width="1920" height="1013" alt="Screenshot 2025-07-10 190225" src="https://github.com/user-attachments/assets/76f8742c-92e1-4039-8989-c334f5a1a883" />
 
 ✅ App will open in browser: http://localhost:8501
