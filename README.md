@@ -62,7 +62,9 @@
 Column Name	     Description
 
 NAME ----------->	First Name
+
 LAST_NAME	-----------> Last Name / Surname
+
 CLASS	Course ----------->	SECTION	Section (A/B/C)
 
 # 📦 Project Files
