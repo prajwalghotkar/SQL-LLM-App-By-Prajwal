@@ -1,0 +1,9 @@
+SQL LLM APP
+
+students database
+
+I have to get the topper ----> SQL Query ----> hits the database and you get the required output
+
+Input Text ---> generative Ai model (google  gemini pro) ---> input prompt( query from the text) ---> sql query ---> hit
+
+the required info / records 
