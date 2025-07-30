@@ -151,6 +151,6 @@ CLASS	Course ----------->	SECTION	Section (A/B/C)
 
 
 
-🧑‍💻
-Prajwal Ghotkar
+🙋‍♂️
+👨‍💻 Developed by Prajwal Ghotkar
 https://github.com/prajwalghotkar
