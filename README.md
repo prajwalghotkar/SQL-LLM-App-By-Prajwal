@@ -152,6 +152,6 @@ CLASS	Course ----------->	SECTION	Section (A/B/C)
 
 
 🙋‍♂️
-👨‍💻 Developed by Prajwal Ghotkar
+👨‍💻 Developed by Prajwal 
 
 https://www.instagram.com/prajwal.ghotkar_
