@@ -1,7 +1,7 @@
 # 📊 SQL LLM App — Natural Language to SQL Query Generator
-## 🔍 Convert English Questions to SQL using Google Gemini + Streamlit + SQLite
+## Convert English Questions to SQL using Google Gemini + Streamlit + SQLite
 
-# 🚀 Overview
+# Overview
 ### SQL LLM App is an intelligent Streamlit web app that translates natural language questions into SQL queries using Google Gemini Pro and fetches data from a local SQLite database.
 
 ### Just type questions like:
@@ -29,33 +29,33 @@
     The SQL command will be: SELECT COUNT(*) FROM STUDENT WHERE CLASS = 'MBBS';
 
 
-# 🧠 Project Description
+# Project Description
 ### This project is a Natural Language to SQL Query App powered by Google Gemini Pro, built using Python, Streamlit, and SQLite. It allows users to ask database-related questions in plain English — and get actual SQL query results in response.This project allows users to enter questions in plain English (like "Show all students in Data Science class?"), and it automatically converts them into SQL queries and runs them on a local STUDENT database using SQLite.
 
 ### The backend logic uses a Large Language Model (LLM) to translate user questions into SQL queries, which are then executed on a local STUDENT.db SQLite database. The database stores records of students, including fields like Name, Last Name, Class, and Section.
 
-#### 🔍 Example Use-Cases:
+#### Example Use-Cases:
 ##### Ask: “How many students are in Devops class?” → Get exact count.
 
 ##### Ask: “Show all students with last name Ghotkar” → Get matching rows.
 
 ##### Ask: “List students from section B” → Fetch filtered data.
 
-#### 🎯 Key Features:
+#### Key Features:
 
 ##### * Convert natural English queries to SQL in real-time
 ##### * Display data using Streamlit
 ##### * Powered by Gemini Pro from Google Generative AI
 ##### * Local lightweight SQLite database for fast response
 
-# 🧠 Tech Stack
+# Tech Stack
 
 ### * LLM: Google Gemini Pro (gemini-pro)
 ### * Frontend: Streamlit
 ### * Database: SQLite
 ### * Environment: Python 3.10 + dotenv for secure API key loading
 
-# 🗃️ Database Schema
+# Database Schema
 
 ### Table Name: STUDENT
 
@@ -67,7 +67,7 @@ LAST_NAME	-----------> Last Name / Surname
 
 CLASS	Course ----------->	SECTION	Section (A/B/C)
 
-# 📦 Project Files
+# Project Files
 
 ### SQL_LLM_APP/
 #### ├──> sqlite.py         # Script to create STUDENT.db and insert data
@@ -76,7 +76,7 @@ CLASS	Course ----------->	SECTION	Section (A/B/C)
 #### ├──> .env              # Contains GOOGLE_API_KEY (not shared publicly)
 #### └──> STUDENT.db        # Auto-generated SQLite database
 
-# 📥 Setup Instructions (Windows + Anaconda)
+# Setup Instructions (Windows + Anaconda)
 #### Follow these terminal commands to run the project:
 
 #### Step 1: Navigate to project folder
@@ -105,48 +105,48 @@ CLASS	Course ----------->	SECTION	Section (A/B/C)
 ##### streamlit run sql.py
 <img width="1920" height="1013" alt="Screenshot 2025-07-10 190225" src="https://github.com/user-attachments/assets/76f8742c-92e1-4039-8989-c334f5a1a883" />
 
-✅ App will open in browser: http://localhost:8501
+App will open in browser: http://localhost:8501
 
 <img width="1920" height="957" alt="Screenshot 2025-07-10 190505" src="https://github.com/user-attachments/assets/09ad5d6f-dae4-4b1b-b32d-fe7c0c09df2b" />
 
-# 💬 Sample Questions You Can Try
+# Sample Questions You Can Try
 ####        English Input	                    SQL Query
 ##### How many students are there? ----->	SELECT COUNT(*) FROM STUDENT;
 ##### Show all students in Devops  ----->	SELECT * FROM STUDENT WHERE CLASS = 'Devops';
 ##### List students in section B	 -----> SELECT * FROM STUDENT WHERE SECTION = 'B';
 ##### Who has surname Ghotkar?	   -----> SELECT * FROM STUDENT WHERE LAST_NAME = 'Ghotkar';
 
-# 🔮 Future Scope
+# Future Scope
 #### This project demonstrates how natural language processing and LLMs (like Gemini) can be used to simplify database interactions. Below are some possible future enhancements:
 
-#### 🔍 Support for Complex Queries
+####  Support for Complex Queries
 ###### Add support for advanced SQL operations such as JOIN, GROUP BY, ORDER BY, and nested queries to handle more complex business questions.
 
-##### 📈 Data Visualization
+#####  Data Visualization
 ###### Integrate libraries like matplotlib, seaborn, or Plotly to show visual insights (charts, graphs) directly from the query results.
 
-##### 📂 Upload Custom Databases
+##### Upload Custom Databases
 ###### Allow users to upload their own .db or .csv files and dynamically generate prompts based on those schemas.
 
-##### 🧠 Fine-Tuned Prompt Engineering
+#####  Fine-Tuned Prompt Engineering
 ###### Continuously improve prompt templates using few-shot learning and feedback loops to make query generation more accurate.
 
-##### 👥 User Authentication
+#####  User Authentication
 ###### Add login functionality for saving user sessions and personal query history.
 
-##### 🛡️ Query Validation & Security
+#####  Query Validation & Security
 ###### Include validation to prevent malformed or harmful SQL statements, especially in production deployments.
 
-##### 🌐 Deployment on Cloud
+#####  Deployment on Cloud
 ###### Deploy the application using platforms like Streamlit Cloud, Hugging Face Spaces, or on your own via AWS, GCP, or Heroku.
 
-##### 📜 Query Logs & Audit Trails
+#####  Query Logs & Audit Trails
 ###### Maintain a log of all natural language inputs and the corresponding SQL queries for analysis, debugging, or training future models.
 
-##### 🗣️ Voice Input Integration
+#####  Voice Input Integration
 ###### Integrate voice-to-text input using tools like Google Speech API to allow hands-free interaction.
 
-##### 📦 API Integration
+#####  API Integration
 ###### Wrap the functionality as a REST API so that other applications can interact with it programmatically.
 
 
