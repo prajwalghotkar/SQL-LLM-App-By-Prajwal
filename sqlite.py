@@ -1,41 +1,41 @@
-# Import module
 import sqlite3
 
-# Connecting to sqlite
+# Fix your database structure
 conn = sqlite3.connect('STUDENT.db')
-
-# Creating a cursor object using the cursor() method
 cursor = conn.cursor()
 
-# Creating table
-table = """CREATE TABLE STUDENT(NAME VARCHAR(255),LAST_NAME VARCHAR(255),CLASS VARCHAR(255),
-SECTION VARCHAR(255));"""
-cursor.execute(table)
+# Drop existing table if it has wrong structure
+cursor.execute("DROP TABLE IF EXISTS STUDENT")
 
-# Queries to INSERT records. 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Prajwal', 'Ghotkar', 'Data Science', 'A')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Manaswi', 'Ghotkar', 'Devops', 'B')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Samikshya', 'Dhule', 'Devops', 'C')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Sejal', 'Dhule', 'Data Science', 'C')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Parth', 'Ghotkar', 'Cyber Security', 'B')''')
-cursor.execute('''INSERT INTO STUDENT VALUES ('Kartik', 'Ghotkar', 'Devops', 'B')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Vivek', 'Ghotkar', 'MBBS-MD', 'A')''')
-cursor.execute('''INSERT INTO STUDENT VALUES ('Pranjli', 'Ghotkar', 'MBBS', 'B')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Twinkal', 'Ghotkar', 'MBBS', 'B')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Janavi', 'Ghotkar', 'MBBS', 'B')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Utkarsh', 'Ghotkar', 'Pharmacy', 'B')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Nayana', 'Ghotkar', 'Devops', 'B')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Saurabh', 'Ghotkar', 'Cloud', 'B')''') 
-cursor.execute('''INSERT INTO STUDENT VALUES ('Devanshu', 'Dhule', 'Devops', 'B')''')    
+# Create table with correct structure
+cursor.execute('''
+    CREATE TABLE STUDENT (
+        NAME TEXT,
+        SURNAME TEXT,
+        CLASS TEXT,
+        SECTION TEXT
+    )
+''')
 
-# Display data inserted 
-print("Data Inserted in the table: ") 
-data=cursor.execute('''SELECT * FROM STUDENT''') 
-for row in data: 
-    print(row) 
-  
-# Commit your changes in the database     
-conn.commit() 
-  
-# Closing the connection 
+# Insert your data
+student_data = [
+    ('Prajwal', 'Ghotkar', 'Data Science', 'A'),
+    ('Manaswi', 'Ghotkar', 'Devops', 'B'),
+    ('Samikshya', 'Dhule', 'Devops', 'C'),
+    ('Sejal', 'Dhule', 'Data Science', 'C'),
+    ('Parth', 'Ghotkar', 'Cyber Security', 'B'),
+    ('Kartik', 'Ghotkar', 'Devops', 'B'),
+    ('Vivek', 'Ghotkar', 'MBBS-MD', 'A'),
+    ('Pranjli', 'Ghotkar', 'MBBS', 'B'),
+    ('Twinkal', 'Ghotkar', 'MBBS', 'B'),
+    ('Janavi', 'Ghotkar', 'MBBS', 'B'),
+    ('Utkarsh', 'Ghotkar', 'Pharmacy', 'B'),
+    ('Nayana', 'Ghotkar', 'Devops', 'B'),
+    ('Saurabh', 'Ghotkar', 'Cloud', 'B'),
+    ('Devanshu', 'Dhule', 'Devops', 'B')
+]
+
+cursor.executemany('INSERT INTO STUDENT VALUES (?, ?, ?, ?)', student_data)
+conn.commit()
 conn.close()
+print("Database fixed successfully!")
