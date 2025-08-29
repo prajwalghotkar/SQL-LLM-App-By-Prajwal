@@ -149,6 +149,7 @@ App will open in browser: http://localhost:8501
 #####  API Integration
 ###### Wrap the functionality as a REST API so that other applications can interact with it programmatically.
 
+<img width="1920" height="976" alt="Screenshot 2025-08-30 031023" src="https://github.com/user-attachments/assets/e8c74af6-5ba1-4a5b-8e38-74e5eb4ce390" />
 
 
 🙋‍♂️👨‍💻 Prajwal 
