@@ -153,4 +153,3 @@ App will open in browser: http://localhost:8501
 
 🙋‍♂️👨‍💻 Prajwal 
 
-https://www.instagram.com/prajwal.ghotkar_
